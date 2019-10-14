@@ -1,0 +1,31 @@
+{
+  "name": "01-node-ecosystem",
+  "version": "0.0.1",
+  "description": "this will be sooooo cool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --verbose",
+    "lint": "eslint './src/**/*.js' --fix",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.9.0",
+    "jsdoc": "^3.6.3"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcarmichael22/401-Lab01.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pcarmichael22/401-Lab01/issues"
+  },
+  "homepage": "https://github.com/pcarmichael22/401-Lab01#readme"
+}
