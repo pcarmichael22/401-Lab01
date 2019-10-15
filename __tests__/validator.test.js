@@ -18,25 +18,23 @@ const bool = false;
   });
 
   it('numbers', () => {
-    expect(num).toBeTruthy();
+    expect(validator.isNumber(num)).toBeTruthy();
   });
 
   it('arrays', () => {
-    expect(arr).toBeTruthy();
-    expect(bool).toBeFalsy();
+    expect(validator.isArray(arr)).toBeTruthy();
   });
 
   it('objects', () => {
-    expect(obj).toBeTruthy();
-    expect(bool).toBeFalsy();
+    expect(validator.isObject(obj)).toBeTruthy();
   });
 
   it('booleans', () => {
-    expect(bool).toBeFalsy();
+    expect(validator.isBoolean(bool)).toBeTruthy();
   });
 
   it('functions', () => {
-    expect(func).toBeTruthy();
+    expect(validator.isFunction(func)).toBeTruthy();
   });
 
 });
@@ -69,14 +67,15 @@ describe('validator module performs complex validations', () => {
 
   it('validates the types of values contained in an array', () => {
     // i.e. an array of all strings or numbers
-    expect(typeof person.kids[0]).toStrictEqual('string');
-    expect(typeof person.kids[1]).toStrictEqual('string');
+    expect(validator.arrValue(person.kids[0])).toBeTruthy();
   });
 
   it('validates a value array against an approved list', () => {
     // i.e. a string might only be allowed to be "yes" or "no"
     let arrayValues = person.kids.includes('Jimmy')
     expect(arrayValues).toBeTruthy();
+
+    
   });
 
   // // TODO: Cover so, so many more cases
